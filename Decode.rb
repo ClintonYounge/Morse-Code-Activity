@@ -55,4 +55,13 @@ def decode_morse_char(morse_char)
       end
 end
 
+def decode_morse_word(morse_word)
+    decoded_word = ""
+    morse_word.split.each do |morse_char|
+        decoded_word += decode_morse_char(morse_char)
+    end
+    return decoded_word
+end
+
 puts decode_morse_char(".-")
+puts decode_morse_word("-- -.--")
