@@ -35,7 +35,8 @@ The site was built with Ruby.
 ### Key Features <a name="key-features"></a>
 
 - Method to decode a Morse character.
-- Method to decode a Morse word
+- Method to decode a Morse word.
+- Method to decode a Morse sentence.
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
