@@ -21,20 +21,18 @@ def decode_morse_word(morse_word)
   morse_word.split.map { |morse_char| decode_morse_char(morse_char) }.join
 end
 
-puts decode_morse_char('.-')
-puts decode_morse_word('-- -.--')
-
 def decode_morse_message(morse_word)
-    decoded_word = ""
-    words = morse_word.split("   ")
-    words.each_with_index do |word, index|
-        word.split.each do |morse_char|
-            decoded_word += decode_morse_char(morse_char)
-        end
-        decoded_word += " " if index < words.length - 1
+  decoded_word = ''
+  words = morse_word.split('   ')
+  words.each_with_index do |word, index|
+    word.split.each do |morse_char|
+      decoded_word += decode_morse_char(morse_char)
     end
-    return decoded_word
+    decoded_word += ' ' if index < words.length - 1
+  end
+  decoded_word
 end
 
-puts decode_morse_message("-- -.--   -. .- -- .")
-puts decode_morse_message(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+puts decode_morse_char('.-')
+puts decode_morse_word('-- -.--')
+puts decode_morse_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
